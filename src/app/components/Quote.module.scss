@@ -1,0 +1,33 @@
+.quoteSection {
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6) 0%,
+
+      rgba(0, 0, 0, 0.6) 100%
+    ),
+    url("/images/beachpathtoocean.jpg") no-repeat;
+
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  background-size: cover;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Qwitcher Grypen";
+}
+
+.quoteContainer {
+  color: white;
+  margin: 100px auto;
+  text-align: center;
+  border: 2px solid white;
+  padding: 40px;
+  width: fit-content;
+
+  h4 {
+    font-weight: 400;
+    font-size: var(--fs-400);
+  }
+}

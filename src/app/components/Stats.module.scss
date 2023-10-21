@@ -1,0 +1,88 @@
+.section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 100px 50px;
+  color: var(--secondary-font-color);
+
+  @media screen and (max-height: 900px) {
+    padding: 20px;
+  }
+
+  @media screen and (max-width: 430px) {
+    justify-content: space-between;
+    padding: 20px 10px;
+  }
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+
+  @media screen and (max-width: 430px) {
+    justify-content: center;
+  }
+
+  h4 {
+    font-size: var(--fs-400);
+    line-height: 100px;
+    display: flex;
+
+    @media screen and (max-width: 430px) {
+      font-size: 36px;
+      line-height: 40px;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  p {
+    width: 100%;
+    text-align: center;
+  }
+
+  .number {
+    width: 240px;
+
+    @media screen and (max-width: 430px) {
+      width: auto;
+    }
+  }
+
+  .patients {
+    width: 190px;
+
+    @media screen and (max-width: 430px) {
+      width: auto;
+    }
+  }
+
+  .years {
+    width: 115px;
+
+    @media screen and (max-width: 430px) {
+      width: auto;
+    }
+  }
+}
+
+.icon {
+  margin-right: 20px;
+
+  @media screen and (max-width: 430px) {
+    margin-right: 10px;
+    display: flex;
+  }
+
+  > * {
+    font-size: var(--fs-600);
+
+    @media screen and (max-width: 430px) {
+      font-size: 36px;
+    }
+  }
+}

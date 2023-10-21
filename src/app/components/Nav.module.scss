@@ -1,0 +1,181 @@
+.section {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  transition: all 0.5s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.sectionScroll {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  transition: all 0.5s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1400px;
+  height: 120px;
+  padding: 0 10px;
+
+  @media screen and (max-width: 430px) {
+    width: 100vw;
+    margin: 0;
+  }
+}
+
+.logo {
+  height: 120px;
+  width: 120px;
+
+  @media screen and (max-width: 430px) {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--secondary);
+  font-weight: 400;
+  transition: all 0.5s ease-in-out;
+
+  li:hover {
+    cursor: pointer;
+  }
+
+  li::after {
+    content: "";
+    position: absolute;
+    width: 95%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--secondary);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+.menuScroll {
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 400;
+  transition: all 0.5s ease-in-out;
+}
+
+.link {
+  @media screen and (max-width: 430px) {
+    display: none;
+  }
+}
+
+.phone {
+  @media screen and (min-width: 431px) {
+    display: none;
+  }
+}
+
+// .button {
+//   // font-size: var(--800);
+//   background-color: var(--accent);
+//   color: white;
+// }
+
+.info {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 430px) {
+    justify-content: center;
+    align-items: center;
+  }
+
+  h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--secondary-font-color);
+    text-align: end;
+
+    @media screen and (max-width: 430px) {
+      font-size: 10px;
+      text-align: center;
+    }
+  }
+
+  .buttonContainer {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+
+    span {
+      transform: translateX(20px);
+    }
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: scale(1, 1) translate(0px, 0px);
+    }
+
+    1% {
+      transform: scale(1, 0.95) translate(0px, 5px);
+    }
+
+    2% {
+      transform: scale(1, 1.05) translate(0px, -10px);
+    }
+    3% {
+      transform: scale(1, 1) translate(0px, 0px);
+    }
+
+    100% {
+      transform: scale(1, 1) translate(0px, 0px);
+    }
+  }
+
+  .button {
+    background-color: var(--accent);
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 430px) {
+      font-size: 10px;
+    }
+  }
+
+  .buttonAnimate {
+    animation: bounce 20s infinite;
+    animation-delay: 10s;
+  }
+}
